@@ -1,0 +1,129 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>jQuery Mobile Application</title>  
+<!--Hacemos referencia a JQueryMobile-->
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />  
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.min.js"></script>  
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>  
+</head>  
+<body>  
+<!--Hacemos referencia con data-role a JQueryMbile-->
+<section id="page1" data-role="page">  
+    <header data-role="header">  
+        <h1>Página 1</h1>  
+    </header>  
+    <div data-role="content">  
+        <div class="ui-grid-b"> 
+        <!--Creamos diversas cajas las cuales tendran nuestras listas--> 
+            <div class="ui-block-a"><a href="#listas-anidadas">Listas anidadas</a></div>  
+            <div class="ui-block-b"><a href="#barra-herramientas">Barra de herramientas</a></div>  
+            <div class="ui-block-c"><a href="#formularios">Formularios</a></div>  
+            <!-- fila 2 -->  
+            <div class="ui-block-a"><a href="#listas-anidadas">Listas anidadas</a></div>  
+            <div class="ui-block-b"><a href="#barra-herramientas">Barra de herramientas</a></div>  
+            <div class="ui-block-c"><a href="#formularios">Formularios</a></div>  
+         </div>  
+    </div>  
+    <footer data-role="footer">  
+        <h2>Pie Página 1</h2>  
+    </footer>  
+</section>  
+<section id="listas-anidadas" data-role="page">  
+    <header data-role="header">  
+        <h1>Listas anidadas</h1>  
+    </header>  
+    <div data-role="content">  
+        <ul data-role="listview">  
+        <!--Creamos una lista con colores-->
+            <li><a href="#">Colores <span class="ui-li-count">3</span></a>  
+                <ul>  
+                    <li>Rojo</li>  
+                    <li>Verde</li>  
+                    <li>Azul</li>  
+                </ul>  
+            </li>  
+            <!--Creamos una lista con ciudades-->
+            <li><a href="#">Ciudades <span class="ui-li-count">2</span></a>  
+                <ul>  
+                    <li>Madrid</li>  
+                    <li>Barcelona</li>  
+                </ul>  
+            </li>  
+        </ul>  
+    </div>  
+</section>  
+<section id="barra-herramientas" data-role="page">  
+    <header data-role="header">  
+        <h1>Barra de herramientas</h1>  
+        <nav data-role="navbar">  
+            <ul>  
+            <!--Es lo que habra en nuestro nav-->
+              <li><a href="#barra-herramientas" class="ui-btn-active">Inicio</a></li>  
+              <li><a href="#">Proyectos</a></li>  
+              <li><a href="#">Acerca de</a></li>  
+            </ul>  
+            <!-- Observe que si quitamos el UL li la apariencia es diferente -->  
+        </nav>  
+    </header>  
+    <div data-role="content">  
+        <p>Contenido de la seccion de inicio</p>  
+    </div>  
+    <footer data-role="footer" data-position="fixed">  
+        <h2>Pie Barra de herramientas</h2>  
+    </footer>  
+</section>  
+<section id="formularios" data-role="page">  
+  <header data-role="header"> 
+  <!--En otro vinculo haremos un formulario--> 
+    <h1>Formularios</h1>  
+  </header>  
+  <!--Creamos el formulario preguntando nombre, correo y celular-->
+  <div class="content" data-role="content">  
+      <form id="form1" action="#" method="post">  
+          <div data-role="fieldcontain">  
+            <label for="nombre">¿Como se llama?:</label>  
+            <input type="text" id="nombre" name="nombre"  placeholder="Nombre completo..."/>  
+            <label for="email">Email:</label>  
+            <input type="email" id="email" name="email"/>  
+            <label for="movil">Móvil:</label>  
+            <input type="phone" id="movil" name="movil"/>  
+  
+            <label for="numAnios">Num de años trabajados:</label>  
+            <input type="range" id="numAnios" name="numAnios" min="0" max="50"/>  
+  
+            <label for="viajar">Disponibilidad para viajar?</label>  
+            <select id="viajar" name="viajar" data-role="slider">  
+                        <option value="1">Sí</option>  
+                        <option value="0">No</option>  
+            </select>  
+            <!--Creamos un checkbox-->
+              <fieldset data-role="controlgroup">  
+                    <legend>Idiomas que es capaz de leer:</legend>  
+  
+                    <label for="ingles">Inglés</label>  
+                    <input type="checkbox" id="ingles" name="ingles">  
+  
+                    <label for="portuges">Portugués</label>  
+                    <input type="checkbox" id="portuges" name="portuges">  
+  
+                    <label for="aleman">Alemán</label>  
+                    <input type="checkbox" id="aleman" name="aleman">  
+              </fieldset>  
+              
+              <label for="estadocivil">Estado civil:</label>  
+              <select id="estadocivil" name="estadocivil" data-native-menu="false">  
+                    <option value="0">Soltero</option>  
+                    <option value="1">Casado</option>  
+                    <option value="2">Viudo</option>  
+                    <option value="3">Divorciado</option>  
+              </select>  
+          </div>  
+      </form>  
+  </div>  
+  <footer data-role="footer" data-position="fixed">  
+    <h2>Pie Formularios</h2>  
+  </footer>  
+</section>  
+</body>  
+</html> 
